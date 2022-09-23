@@ -1,10 +1,7 @@
-dic = {0:0, 1:1}
+from math import sqrt
 
 def fibo(n):
-    global dic
-    if n in dic:
-        return dic[n]
-    dic[n] = fibo(n - 1) + fibo(n - 2)
-    return dic[n]
+    sqrt5 = sqrt(5)
+    return int((((1 + sqrt5) ** n - (1 - sqrt5) **n) / (2 ** n * sqrt5)))
 
 print(fibo(5))
